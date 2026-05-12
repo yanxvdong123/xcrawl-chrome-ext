@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XCrawl Data Extractor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🕷️ XCrawl Extractor</h1>
+      <span class="version">v1.0</span>
+    </header>
+
+    <div class="section">
+      <p class="page-info">
+        Current: <strong id="currentUrl">-</strong>
+      </p>
+    </div>
+
+    <div class="section">
+      <label for="formatSelect">Output Format:</label>
+      <select id="formatSelect">
+        <option value="markdown">Markdown</option>
+        <option value="json">JSON</option>
+        <option value="text">Plain Text</option>
+      </select>
+    </div>
+
+    <div class="section actions">
+      <button id="extractBtn" class="btn primary">🔍 Extract Page</button>
+      <button id="screenshotBtn" class="btn secondary">📸 Screenshot</button>
+    </div>
+
+    <div id="resultArea" class="section result-area hidden">
+      <div class="result-header">
+        <span class="result-label">Result</span>
+        <button id="copyBtn" class="btn small">📋 Copy</button>
+        <button id="downloadBtn" class="btn small">⬇️ Download</button>
+      </div>
+      <pre id="resultContent"></pre>
+    </div>
+
+    <div id="loadingArea" class="section loading hidden">
+      <div class="spinner"></div>
+      <p>Scraping page data...</p>
+    </div>
+
+    <div id="errorArea" class="section error hidden">
+      <p id="errorMessage"></p>
+    </div>
+
+    <footer>
+      <a href="#" id="settingsLink">⚙️ Settings</a>
+      <span>Powered by <a href="https://xcrawl.com" target="_blank">XCrawl</a></span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
